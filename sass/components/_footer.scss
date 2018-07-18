@@ -1,0 +1,9 @@
+@import "../helpers/_variables";
+
+footer {
+  z-index: 500 !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

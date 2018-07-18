@@ -1,0 +1,247 @@
+@import "./mixins";
+
+// Generate color-related classes
+@each $color, $value in $colors {
+  .font-color-#{$color} {
+    color: $value !important;
+
+    * {
+      color: $value !important;
+    }
+  }
+
+  .bg-#{$color} {
+    background: $value;
+
+    &:disabled {
+      background: mix($value, $white, 30%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Generate differente font-sizing classes
+@each $font in $font-sizes {
+  .font-size-#{$font} {
+    font-size: rem($font);
+
+    * {
+      font-size: inherit;
+    }
+  }
+}
+
+// Generate differente font-weight classes
+@each $font in $font-weights {
+  .font-weight-#{$font} {
+    font-weight: $font;
+
+    * {
+      font-weight: inherit;
+    }
+  }
+}
+
+@each $name, $breakpoint in $breakpoints {
+  // Responsive helper classes
+  @media (min-width: $breakpoint) {
+    // Classes with direction and size
+    @for $index from 1 through length($spacings) {
+      @each $side in $sides {
+        .#{$name}margin#{$side}#{nth($space_names, $index)} {
+          margin#{$side}: #{nth($spacings, $index)};
+        }
+
+        .#{$name}padding#{$side}#{nth($space_names, $index)} {
+          padding#{$side}: #{nth($spacings, $index)};
+        }
+      }
+    }
+
+    // Classes with direction and size
+    @for $index from 1 through length($spacings) {
+      @each $side in $sides-no-dash {
+        .#{$name}#{$side}#{nth($space_names, $index)} {
+          #{$side}: #{nth($spacings, $index)};
+        }
+      }
+    }
+
+    // Classes with direction only
+    @each $side in $sides {
+      .#{$name}margin#{$side}-collapse {
+        margin#{$side}: 0;
+      }
+
+      .#{$name}padding#{$side}-collapse {
+        padding#{$side}: 0;
+      }
+
+      .#{$name}margin#{$side}-unset {
+        margin#{$side}: unset;
+      }
+
+      .#{$name}padding#{$side}-unset {
+        padding#{$side}: unset;
+      }
+
+      .#{$name}margin#{$side}-auto {
+        margin#{$side}: auto;
+      }
+
+      .#{$name}padding#{$side}-auto {
+        padding#{$side}: auto;
+      }
+
+      // Classes with color and direction
+      @each $color, $value in $colors {
+        .border#{$side}-#{$color} {
+          border#{$side}-width: 1px;
+          border#{$side}-style: solid;
+          border#{$side}-color: $value;
+        }
+      }
+
+      .border#{$side}-collapse {
+        border#{$side}: 0;
+      }
+
+      .border#{$side}-unset {
+        border#{$side}: unset;
+      }
+    }
+
+    // Classes with direction only
+    @each $side in $sides-no-dash {
+      .#{$name}#{$side}-collapse {
+        #{$side}: 0;
+      }
+
+      .#{$name}#{$side}-unset {
+        #{$side}: unset;
+      }
+    }
+
+    // Classes with size only
+    @for $index from 1 through length($spacings) {
+      .#{$name}margin-vertical#{nth($space_names, $index)} {
+        margin-top: #{nth($spacings, $index)};
+        margin-bottom: #{nth($spacings, $index)};
+      }
+
+      .#{$name}margin-horizontal#{nth($space_names, $index)} {
+        margin-left: #{nth($spacings, $index)};
+        margin-right: #{nth($spacings, $index)};
+      }
+
+      .#{$name}padding-vertical#{nth($space_names, $index)} {
+        padding-top: #{nth($spacings, $index)};
+        padding-bottom: #{nth($spacings, $index)};
+      }
+
+      .#{$name}padding-horizontal#{nth($space_names, $index)} {
+        padding-left: #{nth($spacings, $index)};
+        padding-right: #{nth($spacings, $index)};
+      }
+    }
+
+    @each $border, $value in $border-radius-sizes {
+      .#{$name}border-radius#{$border} {
+        border-radius: #{$value};
+      }
+    }
+
+    // Other helpers
+    .#{$name}border-radius-collapse {
+      border-radius: 0;
+    }
+
+    .#{$name}margin-vertical-collapse {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .#{$name}margin-horizontal-collapse {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .#{$name}padding-horizontal-collapse {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .#{$name}padding-vertical-collapse {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .#{$name}border-radius-unset {
+      border-radius: unset;
+    }
+
+    .#{$name}margin-vertical-unset {
+      margin-top: unset;
+      margin-bottom: unset;
+    }
+
+    .#{$name}margin-horizontal-unset {
+      margin-left: unset;
+      margin-right: unset;
+    }
+
+    .#{$name}padding-horizontal-unset {
+      padding-left: unset;
+      padding-right: unset;
+    }
+
+    .#{$name}padding-vertical-unset {
+      padding-top: unset;
+      padding-bottom: unset;
+    }
+
+    .#{$name}margin-vertical-auto {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .#{$name}margin-horizontal-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .#{$name}padding-horizontal-auto {
+      padding-left: auto;
+      padding-right: auto;
+    }
+
+    .#{$name}padding-vertical-auto {
+      padding-top: auto;
+      padding-bottom: auto;
+    }
+
+    .#{$name}overflow-hidden {
+      overflow: hidden;
+    }
+
+    .#{$name}overflow-x-hidden {
+      overflow-x: hidden;
+    }
+
+    .#{$name}overflow-y-hidden {
+      overflow-y: hidden;
+    }
+
+    .#{$name}overflow-unset {
+      overflow: unset;
+    }
+
+    .#{$name}overflow-x-unset {
+      overflow-x: unset;
+    }
+
+    .#{$name}overflow-y-unset {
+      overflow-y: unset;
+    }
+  }
+}

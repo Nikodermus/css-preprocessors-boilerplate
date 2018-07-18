@@ -1,0 +1,47 @@
+.problem-happened {
+  min-width: 550px;
+
+  &__robot {
+    max-width: 200px;
+    z-index: 100;
+    position: relative;
+
+    &__text {
+      width: 71%;
+    }
+
+    &__img {
+      position: relative;
+      top: -$md;
+    }
+
+    &--404 {
+      &__text {
+        width: 82%;
+      }
+
+      &__img {
+        position: relative;
+        top: -1.8rem;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    top: -$xl;
+    margin-bottom: -$xl;
+    background: $pale-red;
+
+    &__link {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(50%) translateX(-50%);
+      left: 50%;
+    }
+
+    &__main {
+      font-family: $font-monospace;
+    }
+  }
+}

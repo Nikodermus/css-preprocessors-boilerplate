@@ -1,0 +1,184 @@
+@import "variables";
+
+// Clear elements bellow
+@mixin clearfix {
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+    line-height: 0;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// Retina background support
+@mixin retina($file, $ext: "png") {
+  background-image: url("#{file}.#{ext}");
+  background-size: cover;
+  background-position: center center;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("#{file}@2x.#{ext}");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+// Background parallax
+@mixin parallax {
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+// Add custom styled scrollbars when possible
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, transparent, 50%)) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+// css checkbox mixin
+@mixin checkbox($size: "16px", $selectedColor: #444, $checkColor: #FFF, $valign: "middle", $rounded: rounded) {
+  display: none;
+
+  &:checked + i {
+    &::before {
+      opacity: 1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  + i {
+    position: relative;
+    display: inline-block;
+    top: -1px;
+    width: #{$size};
+    height: #{$size};
+    margin: 0;
+    vertical-align: #{$valign};
+    border: 2px solid $pale-red;
+    transition: background 200ms ease;
+    background: $white;
+    font-size: 0;
+    cursor: pointer;
+
+    @if $rounded == "circle" {
+      border-radius: 50%;
+    }
+    @else if $rounded == "rounded" {
+      border-radius: .2em;
+    }
+    @else {
+      border-radius: 0;
+    }
+
+    &:hover::before {
+      opacity: .5;
+    }
+
+    &::before {
+      content: '';
+      background: #{$selectedColor};
+      opacity: 0;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
+
+// PX to EM
+@function em($px, $base: $base-font-size) {
+  @return $px / $base * 1em;
+}
+
+// PX to REM
+@function rem($px, $base: $base-font-size) {
+  @return $px / $base * 1rem;
+}
+
+// React - datepicker
+
+%triangle-arrow {
+  margin-left: -$datepicker__triangle-size;
+  position: absolute;
+
+  &,
+  &::before {
+    box-sizing: content-box;
+    position: absolute;
+    border: $datepicker__triangle-size solid transparent;
+    height: 0;
+    width: 1px;
+  }
+
+  &::before {
+    content: "";
+    z-index: -1;
+    border-width: $datepicker__triangle-size;
+    left: -$datepicker__triangle-size;
+    border-bottom-color: $datepicker__border-color;
+  }
+}
+
+%triangle-arrow-up {
+  @extend %triangle-arrow;
+
+  top: 0;
+  margin-top: -$datepicker__triangle-size;
+
+  &,
+  &::before {
+    border-top: none;
+    border-bottom-color: $datepicker__background-color;
+  }
+
+  &::before {
+    top: -1px;
+    border-bottom-color: $datepicker__border-color;
+  }
+}
+
+%triangle-arrow-down {
+  @extend %triangle-arrow;
+
+  bottom: 0;
+  margin-bottom: -$datepicker__triangle-size;
+
+  &,
+  &::before {
+    border-bottom: none;
+    border-top-color: #fff;
+  }
+
+  &::before {
+    bottom: -1px;
+    border-top-color: $datepicker__border-color;
+  }
+}

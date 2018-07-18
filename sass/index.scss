@@ -1,0 +1,233 @@
+// Libraries
+@import "../../node_modules/bootstrap/dist/css/bootstrap";
+@import "../../node_modules/reset-css/_reset";
+
+// SCSS Partials
+@import "_helpers";
+@import "_components";
+
+:root {
+  --pale-red: $pale-red;
+  --dark-grey: $dark-grey;
+  --grey: $grey;
+  --red: $red;
+  --black: $black;
+  --yellow: $yellow;
+  --white: $white;
+  --light-grey: $light-grey;
+  --silver: $silver;
+
+  @include scrollbars(5px, $red);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  transition: all ease 0.3s;
+  outline: 0 !important;
+
+  &:hover {
+    transition: all ease 0.3s;
+  }
+
+  &:active,
+  &:focus {
+    transition: all ease 0.3s;
+    outline: 0 !important;
+    border: 0 !important;
+  }
+}
+
+button,
+input,
+textarea,
+a {
+  &:active,
+  &:focus {
+    outline: 0 !important;
+    border: 0 solid transparent !important;
+    box-shadow: 0 0 0 transparent !important;
+  }
+}
+
+html {
+  background: $white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: $font-helvetica;
+  color: $dark-grey;
+  box-sizing: border-box;
+
+  * {
+    line-height: 1.3;
+  }
+
+  @include scrollbars(5px, $red);
+}
+
+body {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  background: $white;
+  font-family: $font-helvetica;
+  overflow-x: hidden;
+  padding-top: rem(69);
+  padding-bottom: rem(90);
+
+  &.modal-open {
+    overflow: hidden;
+    max-height: 100vh;
+  }
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: 0 !important;
+
+  &:hover {
+    outline: 0 !important;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0 !important;
+  }
+
+  &:active {
+    outline: 0 !important;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+label {
+  span {
+    float: right;
+    margin-left: 10px;
+  }
+
+  .css-checkbox {
+    @include checkbox(20px, $red, $rounded: circle);
+  }
+}
+
+p {
+  margin-bottom: $sm;
+}
+
+.label {
+  font-family: Roboto;
+  font-size: rem(12);
+  letter-spacing: 1.5px;
+  color: $dark-grey;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.modal {
+  display: flex !important;
+}
+
+.border-transparent {
+  border: transparent !important;
+}
+
+.register-account {
+  .Select-control {
+    border: transparent !important;
+    border-radius: 0px !important;
+    width: 170px;
+    position: relative;
+    bottom: -10px;
+    background: transparent;
+  }
+
+  .Select-control:hover {
+    box-shadow: none;
+  }
+}
+
+.square {
+  position: relative;
+
+  &::after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+  }
+}
+
+.square__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+object {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/default.svg") white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+.dropdown-menu.show {
+  margin-left: -131px;
+
+  .rectangle-menu {
+    width: 55px;
+    height: 7px;
+    background-color: $red;
+  }
+}
+
+[class*="border-radius"] {
+  overflow: hidden;
+}
+
+img {
+  object-fit: contain;
+}
+
+.dropdown-menu,
+.popover {
+  transition-duration: 0ms;
+}
+
+.popover__signup {
+  left: -10px !important;
+}
+
+.dropdown-item:active {
+  background-color: $red;
+}
+
+body.modal-open {
+  overflow: visible;
+}

@@ -1,0 +1,606 @@
+@import "../helpers/_variables";
+
+.create-manager {
+  &__footer {
+    z-index: 1000;
+  }
+}
+
+.carousel {
+  white-space: nowrap;
+  transition: transform #{$transition} 0.5s;
+
+  > div {
+    width: 33.3333%;
+    white-space: normal;
+  }
+}
+
+.manager-details {
+  label.label {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.label-licenses {
+  position: absolute;
+  right: 0;
+}
+
+.react-toggle--checked {
+  .react-toggle-track {
+    background-color: $pale-red;
+  }
+
+  .react-toggle-thumb {
+    border-color: $red;
+    background-color: $red;
+  }
+
+  &:hover:not(.react-toggle--disabled) {
+    .react-toggle-track {
+      background-color: $pale-red;
+    }
+  }
+}
+
+.aDownload {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 6px !important;
+  text-decoration: none !important;
+}
+
+.react-toggle {
+  touch-action: pan-x;
+  margin-left: 30px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.react-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.react-toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transition: opacity 0.25s;
+}
+
+.react-toggle-track {
+  width: 30px;
+  height: 6px;
+  margin-top: 7px;
+  margin-right: 30px !important;
+  border-radius: 30px;
+  background-color: #e7e7e7;
+  transition: all 0.2s ease;
+  margin-left: 1.5px;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #b4b5b7;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: $red;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: $red;
+}
+
+.react-toggle-track-check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  left: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-check {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle-track-x {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  right: 10px;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-x {
+  opacity: 0;
+}
+
+.react-toggle-thumb {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #9b9b9b;
+  border-radius: 50%;
+  background-color: #9b9b9b;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: $red;
+}
+
+.ml-50 {
+  margin-left: 50px !important;
+}
+
+.map-manager {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.input-container::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "@gmail.com";
+}
+
+.transparent,
+.transparent:hover {
+  color: black !important;
+  background: transparent !important;
+  border: transparent !important;
+}
+
+.transparent_event {
+  background: transparent !important;
+  border: transparent !important;
+}
+
+.transparents:hover, .transparents:focus {
+  color: black !important;
+  background: $pale-red !important;
+  border: $yellow 1px solid !important;
+}
+
+.after-button-login {
+  margin-top: -25px;
+}
+
+.after-button-signup {
+  margin-top: -25px;
+}
+
+.p-login {
+  margin-top: -50px;
+  margin-left: 8px;
+  font-family: Helvetica;
+  color: $white;
+  font-weight: bold;
+}
+
+.button-login-red {
+  margin-left: -18.4%;
+  width: 132.8%;
+}
+
+.border-bottom-input {
+  border: transparent;
+  border-bottom: solid 1px $grey !important;
+  border-color: $grey !important;
+  border-radius: 0px;
+}
+
+button:active,
+button:focus,
+input:active,
+input:focus,
+textarea:active,
+textarea:focus,
+a:active,
+a:focus {
+  border: transparent;
+  border-bottom: solid 1px $grey !important;
+  border-color: $grey !important;
+}
+
+.footer-background {
+  background-color: #f0eaea;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.less-ml-120 {
+  margin-left: -120px;
+}
+
+.button-login {
+  width: 80px;
+  height: 24px;
+  padding-top: 8px;
+  padding-left: 19px;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.button-signup {
+  width: 160%;
+  height: 35px;
+  padding-top: 8px;
+  padding-left: 16px;
+  margin-left: -4px;
+  cursor: pointer;
+}
+
+.button-delete-licenses {
+  margin-left: 70px !important;
+  text-align: center;
+  padding-top: 6px;
+  margin-top: 20px !important;
+  height: 31px !important;
+}
+
+.drop-p {
+  text-align: center;
+  color: #9b9b9b;
+}
+
+.striped tr:nth-child(odd) {
+  background-color: #eceeef;
+}
+
+.striped .table-header tr:first-child {
+  background: white;
+}
+
+.striped tr:nth-child(odd) {
+  background-color: #eceeef;
+}
+
+.striped .table-header tr:first-child {
+  background: white;
+}
+
+.dropzone {
+  width: 100%;
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  &__area {
+    width: 100%;
+    max-width: 215px;
+    position: relative;
+    margin: auto;
+
+    &--rejected {
+      border-color: $red;
+    }
+
+    &::after {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $yellow;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+      z-index: 110;
+    }
+  }
+
+  &__image {
+    max-width: 130px;
+    min-width: 90px;
+    width: 50%;
+    margin-left: auto;
+    margin-top: auto;
+  }
+}
+
+.react-pdf {
+  &__Page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.react-pagination-table {
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  margin-bottom: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+.react-pagination-table .sub-title {
+  float: right;
+}
+
+.react-pagination-table .title,
+.react-pagination-table .sub-title {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 100;
+  padding: 20px 20px 10px;
+}
+
+.react-pagination-table .box {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 10px;
+}
+
+.react-pagination-table .table-header {
+  background: transparent;
+}
+
+.react-pagination-table .table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: transparent;
+}
+
+.react-pagination-table .table > tbody > tr > td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.pagination-status {
+  float: right;
+  height: 50px;
+
+  @media (max-width: 768px) {
+    width: 11rem;
+    margin: 0 auto;
+    float: none;
+    padding-left: 1rem;
+  }
+}
+
+.mt-5rem {
+  @media (max-width: 768px) {
+    margin-top: 0 !important;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.pagination-status li {
+  display: inline;
+  cursor: pointer;
+}
+
+.pagination-status > li:first-child > a {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.pagination-status > li:last-child > a {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.pagination-status > li > a {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  color: transparent;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #a29e9e;
+}
+
+.pagination-status > li > a:hover {
+  border-color: #a29e9e;
+  background: #fff;
+  color: #000;
+}
+
+.pagination-status > .active > a,
+.pagination-status > .active > a:focus,
+.pagination-status > .active > a:hover {
+  z-index: 3;
+  color: rgb(182, 174, 174);
+  cursor: default;
+  background-color: #fff7;
+  border-color: #a29e9e;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: $red;
+  box-shadow: inset 0 0 1px 3px white !important;
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+
+.border-license {
+  border: $grey solid 1px !important;
+}
+
+.mt-5rem {
+  margin-top: -5.5rem;
+}
+
+.mt-1rem {
+  margin-top: -1.2rem !important;
+}
+
+.table-header {
+  font-weight: bold;
+}
+
+.container-fluid {
+  .padding-left {
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
+  }
+}
+
+.table {
+  td {
+    @media (max-width: 768px) {
+      padding: .1rem;
+      vertical-align: middle;
+    }
+
+    .d-flex {
+      @media (max-width: 768px) {
+        flex-direction: column !important;
+      }
+    }
+  }
+}
+
+.pagination-status:first-child {
+  font-size: 14px !important;
+}
+
+ul.pagination-status li:first-child a div::before {
+  font-size: 14px !important;
+}
+
+ul.pagination-status li:last-child a div::before {
+  font-size: 14px !important;
+}
+
+ul.pagination-status li a:hover {
+  background: $pale-red !important;
+  border: $yellow 1px solid !important;
+}
+
+.create-mananer-modal {
+  .modal-content {
+    width: 58%;
+    border-radius: 0.8rem;
+  }
+
+  .modal-footer {
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }
+
+  .modal-header > * {
+    font-weight: 600 !important;
+  }
+}

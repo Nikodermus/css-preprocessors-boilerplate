@@ -1,0 +1,61 @@
+@import "../helpers/_variables";
+
+.create-manager-slider--nav {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+    .nav-line {
+      height: 3px;
+      left: 10px;
+      position: absolute;
+      background: $yellow;
+      margin: auto;
+      top: 75%;
+      transition-duration: .5s;
+    }
+    .slider-nav {
+      .circle {
+        position: relative;
+        width: 20px;
+        margin-top: 25px;
+        &:after {
+          content: "";
+          padding-bottom: 100%;
+          display: block;
+        }
+      }
+      .customLink {
+        float: left;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        border: 2px solid $yellow;
+        background: $pale-red;
+        .circle--content {
+          position: absolute;
+          width: 100%;
+          margin-top: -38px;
+          display: flex;
+          box-align: center;
+          align-items: center;
+          box-pack: center;
+          justify-content: center;
+         
+        }
+        .done-check {
+          color: $white;
+          font-size: rem(12);
+          margin-left: 22%;
+          margin-top: 1px;
+        }
+      }
+      .current-nav-done {
+        background: $yellow;
+      }
+      .disabled {
+        opacity: 0.65;
+        pointer-events: none;
+        cursor: not-allowed !important;
+      }
+  }
+}

@@ -1,0 +1,73 @@
+$base-font-size: 16;
+$transition: cubic-bezier(0.65, 0.05, 0.36, 1);
+
+// Colors
+$white: #fff !default;
+$pale-red: #f0eaea !default;
+$silver: #eceeef !default;
+$light-grey: #d8d8d8 !default;
+$grey: #9b9b9b !default;
+$dark-grey: #4a4a4a !default;
+$black: #000 !default;
+$red: #b31114 !default;
+$yellow: #e4a237 !default;
+
+// Radius
+$radius-xs: 0.2rem !default;
+$radius-sm: 0.4rem !default;
+$radius-md: 0.6rem !default;
+$radius-lg: 1rem !default;
+$radius-xl: 1.2rem !default;
+$radius-round: 100rem !default;
+
+// Fonts
+$font-helvetica: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
+$font-roboto: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-monospace: "Courier New", Courier, monospace !default;
+
+// Breakpoints
+$screen-xs: 0 !default;
+$screen-sm: 720px !default;
+$screen-md: 960px !default;
+$screen-lg: 1140px !default;
+
+// Sizes
+$xs: 0.4rem;
+$sm: 0.8rem;
+$md: 1.6rem;
+$lg: 3.2rem;
+$xl: 6.5rem;
+
+// Collections
+$spacings: $xs, $sm, $md, $lg, $xl;
+$space_names: "-xs", "-sm", "", "-lg", "-xl";
+$sides: "-top", "-bottom", "-left", "-right", "";
+$sides-no-dash: "top", "bottom", "left", "right";
+$font-sizes: 12, 16, 21, 28, 37, 50, 67, 80, 119, 159;
+$font-weights: 300, 400, 500, 700;
+
+// Maps
+$colors: (white: $white, pale-red: $pale-red, silver: $silver, light-grey: $light-grey, grey: $grey, dark-grey: $dark-grey, black: $black, red: $red, yellow: $yellow);
+$breakpoints: ("": $screen-xs, tab-: $screen-sm, des-: $screen-md, lar-: $screen-lg);
+$border-radius-sizes: (-sm: $radius-sm, "": $radius-md, -lg: $radius-lg, -xl: $radius-xl, -round: $radius-round);
+
+// align
+$align-center: "text-align: center; margin: auto;";
+
+// Datepicker
+$datepicker__background-color: $white;
+$datepicker__border-color: $grey;
+$datepicker__highlighted-color: $yellow;
+$datepicker__muted-color: $white;
+$datepicker__selected-color: $red;
+$datepicker__text-color: $black;
+$datepicker__header-color: $black;
+$datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 10%);
+$datepicker__border-radius: $radius-xs;
+$datepicker__day-margin: 0.166rem;
+$datepicker__font-size: $sm;
+$datepicker__font-family: $font-roboto;
+$datepicker__item-size: $md;
+$datepicker__margin: $xs;
+$datepicker__navigation-size: $xs;
+$datepicker__triangle-size: 8px;

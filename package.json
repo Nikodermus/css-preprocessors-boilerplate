@@ -1,0 +1,24 @@
+{
+  "name": "css-preprocessors-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikodermus/css-preprocessors-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikodermus/css-preprocessors-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Nikodermus/css-preprocessors-boilerplate#readme",
+  "dependencies": {
+    "nib": "^1.1.2",
+    "reset-css": "^4.0.1",
+    "rupture": "^0.7.1"
+  }
+}
