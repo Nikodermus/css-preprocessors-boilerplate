@@ -1,4 +1,4 @@
-@require "./_mixins"
+@require "mixins"
 
 // Generate color-related classes
 for $color, $value in $palette
@@ -35,7 +35,7 @@ for $color, $value in $palette
 
 /* Responsive classes */
 for $name, $breakpoint in $breakpoints
-  @media (min-width: em($breakpoint))
+  +above($breakpoint)
 
     // Font sizes
     for $font in $font-weights

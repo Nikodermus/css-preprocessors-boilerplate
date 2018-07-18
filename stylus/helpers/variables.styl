@@ -1,5 +1,5 @@
 @require '/node_modules/rupture/rupture'
-@require '_mixins'
+@require 'mixins'
 
 vendor-prefixes = webkit moz o ms official
 $i = !important
@@ -90,11 +90,11 @@ $social = {
 $colors = merge($palette, $social)
 
 $breakpoints = {
-  "": $screen-xs,
-  tab-: $screen-sm,
-  des-: $screen-md,
-  lar-: $screen-lg,
-  xl-: $screen-xl
+  "": xs,
+  tab-: sm,
+  des-: md,
+  lar-: lg,
+  xl-: xl
 }
 
 $spaces = {

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "",
+    "stylus": "stylus -m -c stylus --out ./__tests__/stylus",
+    "sass": ""
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,10 @@
     "nib": "^1.1.2",
     "reset-css": "^4.0.1",
     "rupture": "^0.7.1"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^1.3.3",
+    "npm-run-all": "^4.1.3",
+    "stylus": "^0.54.5"
   }
 }

@@ -1,6 +1,5 @@
 // Libraries
-@import "../../node_modules/bootstrap/dist/css/bootstrap";
-@import "../../node_modules/reset-css/_reset";
+@import "/node_modules/reset-css/_reset";
 
 // SCSS Partials
 @import "_helpers";
@@ -76,16 +75,6 @@ body {
   overflow-x: hidden;
   padding-top: rem(69);
   padding-bottom: rem(90);
-
-  &.modal-open {
-    overflow: hidden;
-    max-height: 100vh;
-  }
-}
-
-#root {
-  height: 100%;
-  width: 100%;
 }
 
 button {
@@ -117,10 +106,6 @@ label {
     float: right;
     margin-left: 10px;
   }
-
-  .css-checkbox {
-    @include checkbox(20px, $red, $rounded: circle);
-  }
 }
 
 p {
@@ -136,27 +121,8 @@ p {
   text-align: right;
 }
 
-.modal {
-  display: flex !important;
-}
-
 .border-transparent {
   border: transparent !important;
-}
-
-.register-account {
-  .Select-control {
-    border: transparent !important;
-    border-radius: 0px !important;
-    width: 170px;
-    position: relative;
-    bottom: -10px;
-    background: transparent;
-  }
-
-  .Select-control:hover {
-    box-shadow: none;
-  }
 }
 
 .square {
@@ -167,43 +133,11 @@ p {
     padding-bottom: 100%;
     display: block;
   }
-}
 
-.square__content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.position-absolute {
-  position: absolute;
-}
-
-object {
-  position: relative;
-
-  &::after {
-    content: '';
+  &__content {
     position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
     width: 100%;
     height: 100%;
-    background: url("../images/default.svg") white;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-  }
-}
-
-.dropdown-menu.show {
-  margin-left: -131px;
-
-  .rectangle-menu {
-    width: 55px;
-    height: 7px;
-    background-color: $red;
   }
 }
 
@@ -213,21 +147,4 @@ object {
 
 img {
   object-fit: contain;
-}
-
-.dropdown-menu,
-.popover {
-  transition-duration: 0ms;
-}
-
-.popover__signup {
-  left: -10px !important;
-}
-
-.dropdown-item:active {
-  background-color: $red;
-}
-
-body.modal-open {
-  overflow: visible;
 }
