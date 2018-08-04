@@ -58,9 +58,11 @@ disabled($color)
   &:disabled
   &[disabled]
   &--disabled
-    background: mix($color, white, 30%)
+    background: lighten($color, 40%)
     cursor: not-allowed
     {block}
+    &:hover
+      background: @background
 
 
 

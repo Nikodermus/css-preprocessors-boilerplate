@@ -1,7 +1,7 @@
 @require "mixins"
 
 // Generate color-related classes
-for $color, $value in $palette
+for $color, $value in $colors
   {'.font-color-' + $color}
     color: $value !important
     color: 'var(--%s) !important' % unquote($color)
@@ -18,7 +18,6 @@ for $color, $value in $palette
     border-style: solid
     border-color: $value
     border-color: 'var(--%s)' % unquote($color)
-    disabled($value)
 
   {'.button-' + $color}
     background: $value
@@ -26,9 +25,14 @@ for $color, $value in $palette
     overflow: hidden
     width: 100%
     border-radius: rem($radius-sm)
-    disabled($value)
+    +disabled($value)
+      cursor: not-allowed
     &:hover
-      background: mix($value, black, 10%)
+      if light($value)
+        background: darken($value, 20%)
+      else
+        background: lighten($value, 20%)
+
   :root
     {'--' + $color}: $value
 

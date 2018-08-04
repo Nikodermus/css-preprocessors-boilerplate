@@ -39,33 +39,43 @@ $radius-round = 1000
 // Collections
 $font-sizes = (12 16 21 28 37 50 67 80 119 159)
 $sides = ("-top" "-bottom" "-left" "-right" "")
-$sides-no-dashes = ("top" "bottom" "left" "right" )
+$sides-no-dashes = ("top" "bottom" "left" "right" "")
 $font-weights = (normal 300 400 500 600 700 900)
 $font-main =  'replace-me'
 $font-sans = -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 
 // Hashes
 $palette = {
-  red: #b42f2f,
-  gray: #a2a2a2,
   black: #333333,
-  green: #579917,
   blue: #186AE8,
-  white: #ffffff,
+  gray: #a2a2a2,
+  green: #579917,
   light-gray: #f2f2f2,
-  grey: gray,
+  orange: #ff3300,
+  pink: #ff66cc,
+  purple: #9933ff,
+  red: #b42f2f,
+  white: #ffffff,
+  yellow: #ffc600,
   light-grey: gray,
+  grey: gray,
   transparent: transparent,
  }
 
  /* Overwrite original colors */
-red = $palette.red
-gray = $palette.gray
-blue = $palette.blue
 black = $palette.black
+blue = $palette.blue
+gray = $palette.gray
 green = $palette.green
-white = $palette.white
 light-gray = $palette.light-gray
+orange  = $palette.orange
+pink = $palette.pink
+purple = $palette.purple
+red = $palette.red
+white = $palette.white
+yellow = $palette.yellow
+light-grey= $palette.gray
+grey= $palette.gray
 transparent = $palette.transparent
 
 //Aliases
@@ -73,18 +83,18 @@ grey = gray
 light-grey = light-gray
 
 $social = {
+  behance: #1769FF
+  dropbox: #007ee5,
   facebook:#4b6eaa,
-  twitter: #55ACEE,
-  youtube: #ff0000,
+  foursquare: #0072b1,
   linkedin: #007bb5,
-  whatsapp: #4DC247,
   pinterest: #CB2027,
   snapchat: #fffc00,
-  dropbox: #007ee5,
-  tumblr: #32506d
-  foursquare: #0072b1,
   spotify: #00E461,
-  behance: #1769FF
+  tumblr: #32506d
+  twitter: #55ACEE,
+  whatsapp: #4DC247,
+  youtube: #ff0000,
 }
 
 $colors = merge($palette, $social)
